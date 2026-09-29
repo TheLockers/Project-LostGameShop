@@ -9,6 +9,7 @@
     <link href="/css/style.css" rel="stylesheet" />
 </head>
 <body class="body-site">
+
     <header class="header">
         <img class="header-logo" src="images/logo.svg" alt="LostGameShop">
         <nav class="header-nav">
@@ -23,26 +24,157 @@
     </header>
 
     <main class="main-container">
-        <section id="about-as" class="information">
+        <section id="about-us" class="information-container">
             <section class="advantages">
-                <h2 class="advantages__title">Наши преимущества перед конкурентами!</h2>
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <h3 class="advantages__subtitle">Привлекательные цены</h3>
-                        <p class="advantages__text">Ваш кошелек скажет спасибо. Мы тоже, но он — громче.</p>
+                <h2 class="advantages-title">Наши преимущества перед конкурентами!</h2>
+                <ul class="advantages-list">
+                    <li class="advantages-item">
+                        <h3 class="advantages-subtitle">Привлекательные цены</h3>
+                        <p class="advantages-text">Ваш кошелек скажет спасибо. Мы тоже, но он — громче.</p>
                     </li>
-                    <li class="advantages__item">
-                        <h3 class="advantages__subtitle">Ежемесячные акции</h3>
-                        <p class="advantages__text">Каждый месяц — новая причина отложить «серьезные» покупки и купить игру.</p>
+                    <li class="advantages-item">
+                        <h3 class="advantages-subtitle">Ежемесячные акции</h3>
+                        <p class="advantages-text">Каждый месяц — новая причина отложить «серьезные» покупки и купить игру.</p>
                     </li>
-                    <li class="advantages__item">
-                        <h3 class="advantages__subtitle">Быстрое приобретение игр</h3>
-                        <p class="advantages__text">Быстрее, чем загрузочный экран. И без «Подождите, идет загрузка...».</p>
+                    <li class="advantages-item">
+                        <h3 class="advantages-subtitle">Быстрое приобретение игр</h3>
+                        <p class="advantages-text">Быстрее, чем загрузочный экран. И без «Подождите, идет загрузка...».</p>
                     </li>
                 </ul>
             </section>
         </section>
-        <section id="popular-games" class="games">
+
+        <section id="popular-games" class="games-container">
+            <h1 class="games-title">Популярные игры!</h1>
+            <div class="game-container">
+                <div class="game-information">
+                    <h2 class="name-game">Lost Kingdom</h2>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Команда разработчиков:</h3>
+                        <p class="game-info-item-value">Red Fox Studio</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Жанр:</h3>
+                        <p class="game-info-item-value">Action</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Рейтинг:</h3>
+                        <div class="game-info-item-value" aria-label="5 из 5">
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star  rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Стоимость:</h3>
+                        <p class="game-info-item-value">1 499 ₽</p>
+                    </div>
+
+                </div>
+                <img class="game-image" src="/images/games/game_01.jpg" alt="Lost Kingdom" />
+            </div>
+            <div class="game-container">
+                <div class="game-information">
+                    <h2 class="name-game">Velocity Rush</h2>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Команда разработчиков:</h3>
+                        <p class="game-info-item-value">North Wind Games</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Жанр:</h3>
+                        <p class="game-info-item-value">RPG</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Рейтинг:</h3>
+                        <p class="game-info-item-value" aria-label="4 из 5">
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star">&#9733;</span>
+                        </p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Стоимость:</h3>
+                        <p class="game-info-item-value">999 ₽</p>
+                    </div>
+                </div>
+                <img class="game-image" src="/images/games/game_02.jpg" alt="velocity Rush" />
+            </div>
+            <div class="game-container">
+                <div class="game-information">
+                    <h2 class="name-game">Neon District</h2>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Команда разработчиков:</h3>
+                        <p class="game-info-item-value">Orbit Games</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Жанр:</h3>
+                        <p class="game-info-item-value">Strategy</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Рейтинг:</h3>
+                        <p class="game-info-item-value" aria-label="4 из 5">
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star">&#9733;</span>
+                        </p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Стоимость:</h3>
+                        <p class="game-info-item-value">1 199 ₽</p>
+                    </div>
+                </div>
+                <img class="game-image" src="/images/games/game_03.jpg" alt="Neon District" />
+            </div>
+            <div class="game-container">
+                <div class="game-information">
+                    <h2 class="name-game">Star Colony</h2>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Команда разработчиков:</h3>
+                        <p class="game-info-item-value">DriveLab</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Жанр:</h3>
+                        <p class="game-info-item-value">Racing</p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Рейтинг:</h3>
+                        <p class="game-info-item-value" aria-label="5 из 5">
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                            <span class="rate-star rate-star-filled">&#9733;</span>
+                        </p>
+                    </div>
+
+                    <div class="game-info-item">
+                        <h3 class="game-info-item-label">Стоимость:</h3>
+                        <p class="game-info-item-value">799 ₽</p>
+                    </div>
+                </div>
+                <img class="game-image" src="/images/games/game_04.jpg" alt="Star Colony" />
+            </div>
         </section>
     </main>
 
@@ -72,5 +204,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
