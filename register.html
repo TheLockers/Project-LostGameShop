@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LostGameShop - регистрация" />
+    <title>LostGameShop: Регистрация</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="body-site">
+
+    <!-- ===== Шапка сайта ===== -->
+    <header class="header">
+        <img class="header-logo" src="images/logo.svg" alt="LostGameShop">
+
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li><a class="header-link" href="index.html">Главная</a></li>
+                <li><a class="header-link" href="index.html#popular-games">Игры</a></li>
+                <li><a class="header-link" href="login.html">Войти</a></li>
+                <li><a class="header-link" href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a class="header-theme" href="register_light.html" aria-label="Светлая тема">☀</a>
+            <a class="header-account" href="profile.html">Личный кабинет</a>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="auth">
+            <h1 class="auth-title">Регистрация</h1>
+
+            <form class="auth-form" action="#" method="post">
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-email">E-mail</label>
+                    <input
+                        class="form-field-input"
+                        type="email"
+                        id="reg-email"
+                        name="email"
+                        placeholder="example@mail.ru"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-surname">Фамилия</label>
+                    <input
+                        class="form-field-input"
+                        type="text"
+                        id="reg-surname"
+                        name="surname"
+                        placeholder="Смирнов"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-name">Имя</label>
+                    <input
+                        class="form-field-input"
+                        type="text"
+                        id="reg-name"
+                        name="name"
+                        placeholder="Алексей"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-birth">Дата рождения</label>
+                    <input
+                        class="form-field-input"
+                        type="date"
+                        id="reg-birth"
+                        name="birthdate"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-phone">Номер телефона</label>
+                    <input
+                        class="form-field-input"
+                        type="tel"
+                        id="reg-phone"
+                        name="phone"
+                        placeholder="+7 999 123-45-67"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-password">Пароль</label>
+                    <input
+                        class="form-field-input"
+                        type="password"
+                        id="reg-password"
+                        name="password"
+                        placeholder="Минимум 6 символов"
+                        required
+                        minlength="6"
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="reg-password-repeat">Повтор пароля</label>
+                    <input
+                        class="form-field-input"
+                        type="password"
+                        id="reg-password-repeat"
+                        name="password_repeat"
+                        placeholder="Повторите пароль"
+                        required
+                        minlength="6"
+                    />
+                </div>
+
+                <label class="form-checkbox">
+                    <input
+                        class="form-checkbox-input"
+                        type="checkbox"
+                        name="agreement"
+                        required
+                    />
+                    <span class="form-checkbox-text">
+                        Я согласен на обработку персональных данных
+                    </span>
+                </label>
+
+                <button class="auth-button" type="submit">Зарегистрироваться</button>
+
+                <p class="auth-text">
+                    Уже есть аккаунт?
+                    <a class="auth-link" href="login.html">Войти</a>
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <nav class="footer-nav">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="index.html" class="footer-link">Главная</a></li>
+                    <li class="footer-item"><a href="register.html" class="footer-link">Регистрация</a></li>
+                    <li class="footer-item"><a href="login.html" class="footer-link">Авторизация</a></li>
+                    <li class="footer-item"><a href="profile.html" class="footer-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contacts">
+                <h3 class="footer-title">Контакты</h3>
+                <p class="footer-text">Можете написать нам на почту!</p>
+                <a href="mailto:info@lostgs.ru" class="footer-link footer-link-accent">info@lostgs.ru</a>
+            </div>
+
+            <div class="footer-about">
+                <h3 class="footer-title">О нас</h3>
+                <p class="footer-text">© 2026 LostGameShop. Все права защищены!</p>
+                <p class="footer-text">
+                    Все торговые марки являются собственностью соответствующих владельцев в РФ и других странах.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
