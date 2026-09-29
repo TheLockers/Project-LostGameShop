@@ -8,6 +8,10 @@
     /* Цвета шрифтов */
     --text-main: #F5F7FA;
     --text-gray: #A8B0BF;
+    /* акценты */
+    --accent-yellow: #F0B429;
+    --accent-pink: #E85D75;
+    --accent-green: #4FB286;
 }
 
 /* Светлая тема */
@@ -21,11 +25,23 @@
     --text-gray: #667085;
 }
 
+/* Сброс отступов у всех элементов*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:focus-visible {
+        outline: 2px solid var(--text-main);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
 
 .body-site {
     display: flex;
@@ -40,114 +56,111 @@
     color: var(--text-main);
 }
 
+/* Хедер стили*/
+
 .header {
     width: 100%;
     max-width: 1920px;
-    height: 90px;
+    padding: 16px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 16px;
     background-color: var(--bg-section);
+    border-radius: 12px;
 }
 
 .header-logo {
-    margin-left: 40px;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 20px;
-    background-color: #FFF;
+    background-color: #DDD;
 }
 
 .header-nav {
-    flex: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 24px;
 }
 
 .header-list {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 12px;
     list-style: none;
-    gap: 48px;
 }
 
 .header-link {
-    color: inherit;
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+    transition: color 0.2s;
 }
 
     .header-link:hover {
-        text-decoration: underline;
-        text-underline-offset: 4px;
+        color: var(--text-gray);
     }
 
 .header-account {
-    margin-right: 40px;
-    color: inherit;
-    text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid var(--text-gray);
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
 }
+
     .header-account:hover {
-        text-decoration: underline;
-        text-underline-offset: 4px;
+        background-color: var(--text-main);
+        color: var(--bg-main);
     }
+
+/* Основной контейнер*/
 
 .main-container {
     width: 100%;
     max-width: 1920px;
 }
 
-.information-container {
-    padding-bottom: 30px;
-    margin: 30px 0;
-}
+/* Преимущества*/
 
 .advantages {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding: 20px 0;
 }
 
 .advantages-title {
-    margin: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .advantages-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: 1fr;
+    gap: 16px;
     list-style: none;
-    padding: 0;
+    width: 100%;
 }
 
 .advantages-item {
-    min-height: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 32px 24px;
+    padding: 24px 20px;
     background-color: var(--bg-card);
     border-radius: 12px;
     border-top: 4px solid var(--text-gray);
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
     .advantages-item:nth-child(1) {
-        border-top-color: #E85D75;
+        border-top-color: var(--accent-pink);
     }
 
     .advantages-item:nth-child(2) {
-        border-top-color: #F0B429;
+        border-top-color: var(--accent-yellow);
     }
 
     .advantages-item:nth-child(3) {
-        border-top-color: #4FB286;
+        border-top-color: var(--accent-green);
     }
 
     .advantages-item:hover {
@@ -156,61 +169,63 @@
     }
 
 .advantages-subtitle {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 20px;
 }
+
+.advantages-text {
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* Популярные игры */
 
 .games-container {
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    padding: 40px 0;
-    border-top: 6px solid var(--bg-section);
+    gap: 24px;
     width: 100%;
+    padding: 24px 0;
+    border-top: 4px solid var(--bg-section);
 }
 
+.games-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* карточка игры */
 .game-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 24px 120px;
-    margin: 0 240px;
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 16px;
     background-color: var(--bg-card);
     border-radius: 12px;
     border-top: 4px solid var(--bg-section);
     box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.35);
     overflow: hidden;
-}
-
-.games-title {
-    text-align: center;
-    font-size: 42px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .game-image {
-    width: 320px;
-    border-radius: 8px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
+    border-radius: 8px;
     display: block;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
 }
 
+/* информация об игре */
 .game-information {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    width: 100%;
-    gap: 24px 32px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
 .name-game {
-    grid-column: 1 / -1;
-    margin-bottom: 8px;
-    font-size: 32px;
+    margin-bottom: 4px;
+    font-size: 24px;
 }
 
 .game-info-item {
@@ -220,71 +235,67 @@
 }
 
 .game-info-item-label {
-    font-size: 0.9rem;
+    font-size: 14px;
     color: var(--text-gray);
     font-weight: 500;
-    font-size: 18px;
 }
 
 .game-info-item-value {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: var(--text-main);
-    font-size: 18px;
 }
 
+/* звёзды рейтинга */
 .rate-star {
     color: var(--text-gray);
     opacity: 0.35;
 }
 
 .rate-star-filled {
-    color: #F0B429;
+    color: var(--accent-yellow);
     opacity: 1;
 }
+
+/* Футер сайта*/
 
 .footer {
     width: 100%;
     max-width: 1920px;
     margin-top: auto;
-    padding: 48px 40px 32px;
+    padding: 32px 20px 24px;
     background-color: var(--bg-section);
     border-radius: 12px 12px 0 0;
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap: 48px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 24px;
 }
 
 .footer-title {
-    margin-bottom: 16px;
-    font-size: 32px;
-    color: var(--text-main);
+    margin-bottom: 12px;
+    font-size: 20px;
 }
 
 .footer-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     list-style: none;
-    padding: 0;
 }
 
 .footer-text {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
     color: var(--text-gray);
 }
 
 .footer-link {
-    color: var(--text-main);
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    font-size: 15px;
     border-bottom: 1px solid transparent;
-    font-size: 18px;
+    transition: color 0.2s, border-color 0.2s;
 }
 
     .footer-link:hover {
@@ -293,46 +304,157 @@
     }
 
 .footer-link-accent {
-    color: #F0B429;
+    color: var(--accent-yellow);
 }
 
     .footer-link-accent:hover {
         color: var(--text-main);
     }
 
-@media (max-width: 768px) {
+/* Адаптивность */
+
+@media (min-width: 768px) {
     .body-site {
-        padding: 12px 16px;
+        padding: 28px 52px;
+        gap: 20px;
     }
 
     .header {
-        flex-direction: column;
-        height: auto;
-        padding: 16px;
-        gap: 16px;
+        flex-direction: row;
+        height: 90px;
+        padding: 0;
+        gap: 0;
     }
 
-    .header-list {
-        flex-direction: column;
-        gap: 12px;
+    .header-logo {
+        margin-left: 32px;
+        width: 64px;
+        height: 64px;
     }
 
     .header-nav {
-        flex-direction: column;
-        width: 100%;
-        gap: 8px;
+        flex: 1;
     }
 
+    .header-list {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .header-account {
+        margin-right: 32px;
+        border: none;
+        padding: 0;
+    }
+
+        .header-account:hover {
+            background-color: transparent;
+            color: var(--text-gray);
+        }
+
     .advantages-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .advantages-title {
+        font-size: 32px;
     }
 
     .game-container {
-        flex-direction: column-reverse;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 24px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .game-image {
+        width: 320px;
+        flex-shrink: 0;
+    }
+
+    .game-information {
+        flex: 1;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 32px;
+        align-items: start;
+    }
+
+    .name-game {
+        grid-column: 1 / -1;
+        font-size: 32px;
+    }
+
+    .games-title {
+        font-size: 36px;
+    }
+
+    .games-container {
+        gap: 32px;
+        padding: 32px 0;
+        border-top: 6px solid var(--bg-section);
+    }
+
+    .footer {
+        padding: 48px 40px 32px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 48px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .games-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 48px 0;
+    }
+
+    .games-title {
+        grid-column: 1 / -1;
+        font-size: 42px;
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
     }
 
     .game-image {
         width: 100%;
+    }
+
+    .advantages-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        min-height: 140px;
+        padding: 32px;
+    }
+
+    .advantages-item-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        gap: 64px;
+    }
+
+    .footer {
+        padding: 56px 64px 40px;
     }
 }
