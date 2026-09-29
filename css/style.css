@@ -27,10 +27,22 @@
     padding: 0;
 }
 
+.body-site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--text-main);
+}
+
 .header {
+    width: 100%;
     max-width: 1920px;
-    height: 70px;
-    margin: 16px 30px;
+    height: 90px;
+    margin: 22px 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,9 +51,9 @@
 }
 
 .header-logo {
-    margin-left: 20px;
-    width: 48px;
-    height: 48px;
+    margin-left: 40px;
+    width: 64px;
+    height: 64px;
     border-radius: 20px;
 }
 
@@ -58,30 +70,32 @@
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 24px;
+    gap: 48px;
 }
 
-a {
+.header-link {
     color: inherit;
     text-decoration: none;
+    font-size: 20px;
 }
+    a:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+    
     a:focus-visible {
-        outline: 2px solid var(--text-main);
-        outline-offset: 2px;
+        outline: none;
+        box-shadow: 0 0 0 2px var(--bg-main), 0 0 0 4px var(--text-main);
+        border-radius: 4px;
     }
 
 .header-account {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
-body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: var(--bg-main);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    color: var(--text-main);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.main-container {
+    width: 100%;
+    max-width: 1920px;
 }
 
 
