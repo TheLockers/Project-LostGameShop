@@ -1,0 +1,38 @@
+/*База стилей*/
+/* Темная тема (по умолчанию) */
+:root {
+    /* Фоны */
+    --bg-main: #0F1115;
+    --bg-section: #171A21;
+    --bg-cards: #20242D;
+    /* Цвета шрифтов */
+    --text-main: #F5F7FA;
+    --text-gray: #A8B0BF;
+}
+
+/* Светлая тема */
+.theme-light {
+    /* Фоны */
+    --bg-main: #F4F6FA;
+    --bg-section: #E9EDF3;
+    --bg-card: #FFFFFF;
+    /* Цвета шрифтов */
+    --text-main: #171A21;
+    --text-gray: #667085;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
