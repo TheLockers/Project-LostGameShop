@@ -52,32 +52,32 @@ a {
     gap: 22px;
     font-family: 'Segoe UI', system-ui, sans-serif;
     background-color: var(--bg-main);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     color: var(--text-main);
 }
 
 /* Хедер стили*/
 
 .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
     width: 100%;
     max-width: 1920px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    padding: 0 32px;
     background-color: var(--bg-section);
-    border-radius: 12px;
 }
 
 .header-logo {
-    width: 56px;
-    height: 56px;
-    border-radius: 20px;
+    justify-self: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 30%;
     background-color: #DDD;
 }
 
 .header-nav {
+    justify-self: center;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -98,6 +98,30 @@ a {
 
     .header-link:hover {
         color: var(--text-gray);
+    }
+
+.header-actions {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .header-theme:hover {
+        background-color: var(--bg-card);
+        color: var(--text-main);
     }
 
 .header-account {
@@ -320,20 +344,20 @@ a {
     }
 
     .header {
-        flex-direction: row;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
         height: 90px;
-        padding: 0;
+        padding: 0 32px;
         gap: 0;
     }
 
     .header-logo {
-        margin-left: 32px;
-        width: 64px;
-        height: 64px;
+        justify-self: start;
     }
 
     .header-nav {
-        flex: 1;
+        justify-self: center;
+        width: auto;
     }
 
     .header-list {
@@ -341,10 +365,11 @@ a {
         gap: 32px;
     }
 
+    .header-actions {
+        justify-self: end;
+    }
+
     .header-account {
-        margin-right: 32px;
-        border: none;
-        padding: 0;
     }
 
         .header-account:hover {
