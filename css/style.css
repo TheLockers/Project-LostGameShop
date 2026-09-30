@@ -1,0 +1,729 @@
+/*База стилей*/
+/* Темная тема (по умолчанию) */
+:root {
+    /* Фоны */
+    --bg-main: #0F1115;
+    --bg-section: #171A21;
+    --bg-card: #20242D;
+    /* Цвета шрифтов */
+    --text-main: #F5F7FA;
+    --text-gray: #A8B0BF;
+    /* акценты */
+    --accent-yellow: #F0B429;
+    --accent-pink: #E85D75;
+    --accent-green: #4FB286;
+}
+
+/* Светлая тема */
+.theme-light {
+    /* Фоны */
+    --bg-main: #F4F6FA;
+    --bg-section: #E9EDF3;
+    --bg-card: #FFFFFF;
+    /* Цвета шрифтов */
+    --text-main: #171A21;
+    --text-gray: #667085;
+}
+
+/* Сброс отступов у всех элементов*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+    a:focus-visible {
+        outline: 2px solid var(--text-main);
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+
+.body-site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+    min-height: 100vh;
+    gap: 22px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+/* Хедер стили*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 32px;
+    background-color: var(--bg-section);
+}
+
+.header-logo {
+    justify-self: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 30%;
+    background-color: #DDD;
+}
+
+.header-nav {
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+}
+
+.header-link {
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+    .header-link:hover {
+        color: var(--text-gray);
+    }
+
+.header-actions {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .header-theme:hover {
+        background-color: var(--bg-card);
+        color: var(--text-main);
+    }
+
+.header-account {
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid var(--text-gray);
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .header-account:hover {
+        background-color: var(--text-main);
+        color: var(--bg-main);
+    }
+
+/* Основной контейнер*/
+
+.main-container {
+    width: 100%;
+    max-width: 1920px;
+}
+
+/* Преимущества*/
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.advantages-title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    list-style: none;
+    width: 100%;
+}
+
+.advantages-item {
+    padding: 24px 20px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border-top: 4px solid var(--text-gray);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+    .advantages-item:nth-child(1) {
+        border-top-color: var(--accent-pink);
+    }
+
+    .advantages-item:nth-child(2) {
+        border-top-color: var(--accent-yellow);
+    }
+
+    .advantages-item:nth-child(3) {
+        border-top-color: var(--accent-green);
+    }
+
+    .advantages-item:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        transform: translateY(-4px);
+    }
+
+.advantages-subtitle {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.advantages-text {
+    color: var(--text-gray);
+    line-height: 1.5;
+}
+
+/* Популярные игры */
+
+.games-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    padding: 24px 0;
+    border-top: 4px solid var(--bg-section);
+}
+
+.games-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+/* карточка игры */
+.game-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border-top: 4px solid var(--bg-section);
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* информация об игре */
+.game-information {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.name-game {
+    margin-bottom: 4px;
+    font-size: 24px;
+}
+
+.game-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.game-info-item-label {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.game-info-item-value {
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+/* звёзды рейтинга */
+.rate-star {
+    color: var(--text-gray);
+    opacity: 0.35;
+}
+
+.rate-star-filled {
+    color: var(--accent-yellow);
+    opacity: 1;
+}
+
+/* Футер сайта*/
+
+.footer {
+    width: 100%;
+    max-width: 1920px;
+    margin-top: auto;
+    padding: 32px 20px 24px;
+    background-color: var(--bg-section);
+    border-radius: 12px 12px 0 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.footer-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.footer-text {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-gray);
+}
+
+.footer-link {
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+    .footer-link:hover {
+        color: var(--text-gray);
+        border-bottom-color: currentColor;
+    }
+
+.footer-link-accent {
+    color: var(--accent-yellow);
+}
+
+    .footer-link-accent:hover {
+        color: var(--text-main);
+    }
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.auth-title {
+    margin-bottom: 24px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px 20px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.35);
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field-label {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.form-field-input {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    border: 1px solid var(--bg-section);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+    .form-field-input:focus {
+        border-color: var(--accent-yellow);
+    }
+
+    .form-field-input::placeholder {
+        color: var(--text-gray);
+        opacity: 0.7;
+    }
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text-gray);
+}
+
+.form-checkbox-input {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: var(--accent-yellow);
+}
+
+.auth-button {
+    padding: 14px 24px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--bg-main);
+    background-color: var(--accent-yellow);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+    .auth-button:hover {
+        background-color: #d99e1f;
+    }
+
+    .auth-button:active {
+        transform: scale(0.98);
+    }
+
+.auth-text {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.auth-link {
+    color: var(--accent-yellow);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+    .auth-link:hover {
+        border-bottom-color: currentColor;
+    }
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 0;
+}
+
+.profile-title {
+    font-size: 28px;
+    text-align: center;
+}
+
+.profile-subtitle {
+    margin-bottom: 16px;
+    font-size: 22px;
+}
+
+.profile-info,
+.profile-purchases,
+.profile-settings {
+    padding: 24px 20px;
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.35);
+}
+
+.profile-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--bg-section);
+}
+
+    .profile-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+.profile-item-label {
+    color: var(--text-gray);
+    font-size: 15px;
+}
+
+.profile-item-value {
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.purchases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+.purchase-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px;
+    background-color: var(--bg-main);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-yellow);
+}
+
+.purchase-date {
+    font-size: 13px;
+    color: var(--text-gray);
+}
+
+.purchase-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.purchase-cost {
+    font-size: 16px;
+    color: var(--accent-yellow);
+    font-weight: 600;
+}
+
+.profile-button {
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid var(--text-gray);
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+    .profile-button:hover {
+        background-color: var(--text-main);
+        color: var(--bg-main);
+    }
+
+/* Адаптивность */
+
+@media (min-width: 768px) {
+    .body-site {
+        padding: 28px 52px;
+        gap: 20px;
+    }
+
+    .header {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        height: 90px;
+        padding: 0 32px;
+        gap: 0;
+    }
+
+    .header-logo {
+        justify-self: start;
+    }
+
+    .header-nav {
+        justify-self: center;
+        width: auto;
+    }
+
+    .header-list {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .header-actions {
+        justify-self: end;
+    }
+
+    .header-account {
+    }
+
+        .header-account:hover {
+            background-color: transparent;
+            color: var(--text-gray);
+        }
+
+    .advantages-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .advantages-title {
+        font-size: 32px;
+    }
+
+    .game-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        padding: 24px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .game-image {
+        width: 320px;
+        flex-shrink: 0;
+    }
+
+    .game-information {
+        flex: 1;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 32px;
+        align-items: start;
+    }
+
+    .name-game {
+        grid-column: 1 / -1;
+        font-size: 32px;
+    }
+
+    .games-title {
+        font-size: 36px;
+    }
+
+    .games-container {
+        gap: 32px;
+        padding: 32px 0;
+        border-top: 6px solid var(--bg-section);
+    }
+
+    .footer {
+        padding: 48px 40px 32px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 48px;
+    }
+
+    .footer-title {
+        font-size: 24px;
+    }
+
+    .auth-form {
+        padding: 32px;
+        gap: 20px;
+    }
+
+    .profile {
+        padding: 48px 0;
+    }
+
+    .profile-info,
+    .profile-purchases,
+    .profile-settings {
+        padding: 32px;
+    }
+
+    .profile-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 32px;
+    }
+
+    .purchase-item {
+        grid-template-columns: 140px 1fr auto;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .games-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        padding: 48px 0;
+    }
+
+    .games-title {
+        grid-column: 1 / -1;
+        font-size: 42px;
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .game-image {
+        width: 100%;
+    }
+
+    .advantages-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        min-height: 140px;
+        padding: 32px;
+    }
+
+    .advantages-item-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        gap: 64px;
+    }
+
+    .footer {
+        padding: 56px 64px 40px;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LostGameShop - вход в личный кабинет" />
+    <title>LostGameShop: Вход</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body class="body-site">
+
+    <header class="header">
+        <img class="header-logo" src="images/logo.svg" alt="LostGameShop">
+
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li><a class="header-link" href="index.html">Главная</a></li>
+                <li><a class="header-link" href="index.html#popular-games">Игры</a></li>
+                <li><a class="header-link" href="login.html">Войти</a></li>
+                <li><a class="header-link" href="register.html">Регистрация</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a class="header-theme" href="login_light.html" aria-label="Светлая тема">☀</a>
+            <a class="header-account" href="profile.html">Личный кабинет</a>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="auth">
+            <h1 class="auth-title">Вход в личный кабинет</h1>
+
+            <form class="auth-form" action="#" method="post">
+
+                <div class="form-field">
+                    <label class="form-field-label" for="login-email">E-mail</label>
+                    <input
+                        class="form-field-input"
+                        type="email"
+                        id="login-email"
+                        name="email"
+                        placeholder="example@mail.ru"
+                        required
+                    />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field-label" for="login-password">Пароль</label>
+                    <input
+                        class="form-field-input"
+                        type="password"
+                        id="login-password"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                        minlength="6"
+                    />
+                </div>
+
+                <button class="auth-button" type="submit">Войти</button>
+
+                <p class="auth-text">
+                    Нет аккаунта?
+                    <a class="auth-link" href="register.html">Регестрация</a>
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <nav class="footer-nav">
+                <h3 class="footer-title">Навигация</h3>
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="index.html" class="footer-link">Главная</a></li>
+                    <li class="footer-item"><a href="register.html" class="footer-link">Регистрация</a></li>
+                    <li class="footer-item"><a href="login.html" class="footer-link">Авторизация</a></li>
+                    <li class="footer-item"><a href="profile.html" class="footer-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer-contacts">
+                <h3 class="footer-title">Контакты</h3>
+                <p class="footer-text">Можете написать нам на почту!</p>
+                <a href="mailto:info@lostgs.ru" class="footer-link footer-link-accent">info@lostgs.ru</a>
+            </div>
+
+            <div class="footer-about">
+                <h3 class="footer-title">О нас</h3>
+                <p class="footer-text">© 2026 LostGameShop. Все права защищены!</p>
+                <p class="footer-text">
+                    Все торговые марки являются собственностью соответствующих владельцев в РФ и других странах.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
